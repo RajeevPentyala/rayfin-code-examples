@@ -1,0 +1,44 @@
+{
+  "source": "productslakehouse",
+  "connector": "fabric-sqlanalytics",
+  "connectionString": "x6eps4xrq2xudenlfv6naeo3i4-5lsqqxvdjsvudi2k4ff2omvoae.msit-datawarehouse.fabric.microsoft.com",
+  "discoveredAt": "2026-10-18T00:27:47.084Z",
+  "schemas": [
+    {
+      "schemaName": "dbo",
+      "tables": [
+        {
+          "tableName": "products",
+          "columns": [
+            {
+              "columnName": "ProductId",
+              "dataType": "int",
+              "isNullable": true,
+              "precision": 10,
+              "scale": 0
+            },
+            {
+              "columnName": "ProductName",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "Category",
+              "dataType": "varchar",
+              "isNullable": true,
+              "maxLength": 8000
+            },
+            {
+              "columnName": "Price",
+              "dataType": "decimal",
+              "isNullable": true,
+              "precision": 10,
+              "scale": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

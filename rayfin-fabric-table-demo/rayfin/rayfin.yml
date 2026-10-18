@@ -1,0 +1,35 @@
+id: rayfin-fabric-table-demo
+name: rayfin-fabric-table-demo
+version: 1.0.0
+services:
+  auth:
+    enabled: true
+    fabric:
+      enabled: true
+    allowedRedirectUris:
+      - http://localhost:5173
+      - http://localhost:5175
+      - http://127.0.0.1:5175
+      - https://risen-fog-ff73abe718-westcentralus.webapp.msit.fabricapps.net
+  data:
+    enabled: false
+  storage:
+    enabled: false
+  staticHosting:
+    enabled: true
+    folder: dist
+    buildCommand: npm run build:fabric
+    indexDocument: index.html
+    assetAccess: protected
+  functions:
+    enabled: false
+connectors:
+  - name: productslakehouse
+    type: fabric-sqlanalytics
+    config:
+      workspaceId: 5e08e5ea-4ca3-41ab-a34a-e14ba732ae01
+      itemId: c3314ed3-3839-400e-9008-5e0e779220fa
+    auth:
+      type: application
+    operations:
+      - name: read
